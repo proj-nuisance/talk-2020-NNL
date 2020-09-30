@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> DataLad </title>
+  <meta name="description" content="Use of MRI QC metrics, scanning
+									parameters and seasonal variation data to control for variance in MRI studies ">
+  <meta name="author" content=" Adina S. Wagner ">
+
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/main.css" id="theme">
+  <script src="js/printpdf.js"></script>
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+
+<section>
+<section>
+
+  <img data-src="pics/con-ccn-dartmouth-letterhead.svg">
+
+  <h3>Use of MRI QC metrics, scanning parameters 
+and seasonal variation data to control for variance in MRI studies</h3>
+
+  <!--
+  <table style="border:none">
+    <tr>
+      <td>
+		<img style="height:150px;margin-bottom:30px" data-src="pics/datalad_logo_wide.svg">
+	  </td>
+        <td>
+            <h3>Use of MRI QC metrics, scanning parameters 
+and seasonal variation data to control for variance in MRI studies</h3>
+        </td>
+    </tr>
+</table> -->
+
+
+  <div style="margin-top:1em;text-align:center">
+  <table style="border: none;">
+  <tr>
+	<td>Yaroslav O. Halchenko
+	  <br><small>
+		<a href="https://twitter.com/yarikoptic" target="_blank">
+		  <img data-src="pics/twitter.png" style="height:30px;margin:0px" />
+		  @yarikoptic</a></small></td>
+  </tr>
+  <tr>
+    <td>
+        <small><a href="http://centerforopenneuroscience.org/" target="_blank">Center for Open Neuroscience</a>,
+          <br><a href="https://pbs.dartmouth.edu/" target="_blank">Department of Psychological and Brain Sciences</a>
+          <br><a href="https://www.dartmouth.edu/ccn/" target="_blank">Center for Cognitive Neuroscience</a><br>
+		  Dartmouth College</small>
+		<!--<img style="height:150px;" data-src="pics/con-logo_blue_big.svg">--><br>
+    </td>
+      <td></td>
+          <td><!--<img style="height:70px;margin-right:10px" data-src="pics/dartmouth_logo.svg" />-->
+	  <br></td>
+  </tr>
+  </table>
+  </div>
+<br><br>
+    <small>
+    "Nuisance" project: <a href="https://github.com/proj-nuisance" target="_blank">
+    https://github.com/proj-nuisance</a></a><br>
+    ReproNim center: <a href="https://repronim.org" target="_blank">https://repronim.org</a></small></a><br>
+</small>
+</section>
+
+<section>
+  <h2>Acknowledgements</h2>
+  <table>
+  <tr style="vertical-align:middle">
+    <td style="vertical-align:middle">
+      <dl>
+        <dt>Nuisance Study</dt>
+        <dd style="margin-left:5px!important">
+          <ul style="margin-left:5px!important">
+              <li>Christopher Cheng</li>
+          </ul>
+        </dd>
+        <dt style="margin-top:20px">QA data & DBIC support</dt>
+        <dd style="margin-left:5px!important">
+          <ul style="margin-left:5px!important">
+            <li>Chandana Kodiweera</li>
+			<li>Terry Sackett</li>
+          </ul>
+        </dd>
+        <dt style="margin-top:20px">MRI data</dt>
+        <dd style="margin-left:5px!important">
+          <ul style="margin-left:5px!important">
+			<li>Ida Gobbini</li>
+			<li>James Haxby</li>
+            <li>Luke Chang</li>
+			<li>Eshin Jolly</li>
+          </ul>
+        </dd>
+      </dl>
+    </td>
+    <td style="vertical-align:middle">
+  <div style="margin-bottom:-20px;text-align:center"><strong>Funders</strong></div>
+  <img style="height:150px;margin-right:50px" data-src="pics/nsf1.jpg" />
+          <ul style="margin-left:5px!important">
+            <li>1835200<br><br></li>
+		  </ul>
+  <br><img style="height:150px;margin-right:50px" data-src="pics/nih.png" />
+          <ul style="margin-left:5px!important">
+            <li>P41EB019936</li>
+			<li>R01MH116026</li>
+			<li>R56MH080716</li>
+			<li>R01MH116026</li>
+		  </ul>
+
+</div>
+<!--
+  <div style="margin-top:40px;margin-bottom:20px;text-align:center"><strong>Collaborators</strong></div>
+  <div style="margin-top:-20px">
+  <img style="height:100px;margin:20px" data-src="pics/hbp_logo.png" />
+  <img style="height:100px;margin:20px" data-src="pics/conp_logo.png" />
+  <img style="height:100px;margin:20px" data-src="pics/vbc_logo.png" />
+  </div>
+  <div style="margin-top:-40px">
+  <img style="height:120px;margin:20px" data-src="pics/openneuro_logo.png" />
+  <img style="height:120px;margin:20px" data-src="pics/cbrain_logo.png" />
+  <img style="height:140px;margin:20px" data-src="pics/brainlife_logo.png" />
+  </div>
+  -->
+  </td>
+  </tr>
+  </table>
+</section>
+</section>
+
+
+<section>
+    <h2>Further Information</h2>
+    <ul>
+      <li>Data/code:
+		<ul>
+		  <li><a href="https://github.com/proj-nuisance">github.com/proj-nuisance</a> </li>
+		  <li><a href="http://datasets.datalad.org/?dir=/con/nuisance">datasets.datalad.org/?dir=/con/nuisance</a></li>
+		  </ul>
+      <li>DataLad: <a href="https://datalad.org">datalad.org</a></li>
+	  <li>ReproNim: <a href="https://repronim.org">repronim.org</a></li>
+    </ul>
+        <br>
+        <br>
+    Slides: <a href="TODO" target="_blank">
+    https://github.com/proj-nuisance/TODO/</a>
+
+</section>
+
+<section>
+    <h1>Thanks!</h1>
+</section>
+</section>
+
+</div> <!-- /.slides -->
+</div> <!-- /.reveal -->
+
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+  // Full list of configuration options available at:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1280,
+    height: 960,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0,
+
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // Optional reveal.js plugins
+    dependencies: [
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true }
+    ]
+  });
+</script>
+</body>
+</html>
