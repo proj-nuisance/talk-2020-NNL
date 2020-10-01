@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title> DataLad </title>
+  <title> Project Nuisance </title>
   <meta name="description" content="Use of MRI QC metrics, scanning
 									parameters and seasonal variation data to control for variance in MRI studies ">
-  <meta name="author" content=" Adina S. Wagner ">
+  <meta name="author" content=" Yaroslav O. Halchenko ">
 
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -24,8 +24,7 @@
 
   <img data-src="pics/con-ccn-dartmouth-letterhead.svg">
 
-  <h3>Use of MRI QC metrics, scanning parameters 
-and seasonal variation data to control for variance in MRI studies</h3>
+  <h3>Use of MRI QC metrics, scanning parameters and seasonal variation data to control for variance in MRI studies</h3>
 
   <!--
   <table style="border:none">
@@ -49,25 +48,26 @@ and seasonal variation data to control for variance in MRI studies</h3>
 		<a href="https://twitter.com/yarikoptic" target="_blank">
 		  <img data-src="pics/twitter.png" style="height:30px;margin:0px" />
 		  @yarikoptic</a></small></td>
+	<td>Christopher P. Cheng
+	  <br><small>
+		<a href="https://twitter.com/chrispcheng="_blank">
+		  <img data-src="pics/twitter.png" style="height:30px;margin:0px" />
+		  @chrispcheng</a></small></td>
+
   </tr>
   <tr>
     <td>
-        <small><a href="http://centerforopenneuroscience.org/" target="_blank">Center for Open Neuroscience</a>,
+        <small><a href="http://centerforopenneuroscience.org/" target="_blank">Center for Open Neuroscience</a>
           <br><a href="https://pbs.dartmouth.edu/" target="_blank">Department of Psychological and Brain Sciences</a>
           <br><a href="https://www.dartmouth.edu/ccn/" target="_blank">Center for Cognitive Neuroscience</a><br>
-		  Dartmouth College</small>
+		  <a href="http://www.dartmouth.edu" target="_blank">Dartmouth College</a></small>
 		<!--<img style="height:150px;" data-src="pics/con-logo_blue_big.svg">--><br>
     </td>
-      <td></td>
-          <td><!--<img style="height:70px;margin-right:10px" data-src="pics/dartmouth_logo.svg" />-->
-	  <br></td>
   </tr>
   </table>
   </div>
 <br><br>
     <small>
-    "Nuisance" project: <a href="https://github.com/proj-nuisance" target="_blank">
-    https://github.com/proj-nuisance</a></a><br>
     ReproNim center: <a href="https://repronim.org" target="_blank">https://repronim.org</a></small></a><br>
 </small>
 </section>
@@ -78,12 +78,6 @@ and seasonal variation data to control for variance in MRI studies</h3>
   <tr style="vertical-align:middle">
     <td style="vertical-align:middle">
       <dl>
-        <dt>Nuisance Study</dt>
-        <dd style="margin-left:5px!important">
-          <ul style="margin-left:5px!important">
-              <li>Christopher Cheng</li>
-          </ul>
-        </dd>
         <dt style="margin-top:20px">QA data & DBIC support</dt>
         <dd style="margin-left:5px!important">
           <ul style="margin-left:5px!important">
@@ -102,20 +96,26 @@ and seasonal variation data to control for variance in MRI studies</h3>
         </dd>
       </dl>
     </td>
-    <td style="vertical-align:middle">
-  <div style="margin-bottom:-20px;text-align:center"><strong>Funders</strong></div>
-  <img style="height:150px;margin-right:50px" data-src="pics/nsf1.jpg" />
-          <ul style="margin-left:5px!important">
-            <li>1835200<br><br></li>
-		  </ul>
-  <br><img style="height:150px;margin-right:50px" data-src="pics/nih.png" />
+	<td style="vertical-align:middle">
+	  <div style="margin-left:40px;margin-bottom:-20px;text-align:center"><strong>Funders</strong></div>
+	  <div style="margin-left:40px;text-align: left">
+		<br>
+		<img style="height:150px;margin-right:50px" data-src="pics/nsf1.jpg" />
+		<ul style="margin-left:5px!important">
+		  <li>1429999</li>
+		  <li>1912266</li>
+		  <li>1835200<br></li>
+		</ul>
+		<br><br><img style="height:150px;margin-right:50px" data-src="pics/nih.png" />
           <ul style="margin-left:5px!important">
             <li>P41EB019936</li>
 			<li>R01MH116026</li>
 			<li>R56MH080716</li>
 			<li>R01MH116026</li>
 		  </ul>
-
+		  </div>
+	</td>
+  </tr>
 </div>
 <!--
   <div style="margin-top:40px;margin-bottom:20px;text-align:center"><strong>Collaborators</strong></div>
@@ -135,6 +135,227 @@ and seasonal variation data to control for variance in MRI studies</h3>
   </table>
 </section>
 </section>
+
+<section>
+ <section data-markdown  data-separator="^\n----\n" data-vertical="^\n---\n"><textarea data-template>
+## Why scan Phantoms?
+
+They
+- are "cheap"
+- don't mind
+- have known stable characteristics
+
+----
+
+## Say Hi to Emmet
+
+- they can be fun to build
+
+![Emmet](./pics/emmet-IMG_1028.JPG)
+<!-- .element: style="height: 400pt" -->
+
+http://datasets.datalad.org/?dir=/dbic/QA/sub-emmet
+<!-- .element: style="font-size: 12pt" -->
+
+----
+
+## But how stable are those?
+
+![SNR](./pics/snr_09142020.png)
+<!-- .element: style="height: 500pt" -->
+
+https://www.dartmouth.edu/dbic/research_infrastructure/qualityassurance.html
+<!-- .element: style="font-size: 16pt" -->
+
+
+----
+
+## What that data can tell us?
+
+### QA
+
+#### If scanner operational characteristics changed:
+
+- identify the reason
+- address the issue and return back to "normal"
+  - the new "normal" might be different
+
+----
+
+## What that data can tell us?
+
+### QA
+
+#### If scanner operational characteristics did not change:
+
+- all is good, bury the data
+- phantom data is not considered useful beyond QA
+
+----
+
+## But we saw that it does change!
+
+- *Q1: Why/What?*
+
+   - factors effecting phantom data effect human participants data too
+
+   - *What factors effect QA metrics?*
+   - *How well could we explain variance in QA metrics?*
+
+
+- *Q2: How to account for "scanner mood" in human data?*
+
+   - some factors could not be easily accounted for directly in human data
+
+   - *Can we use phantom QA metrics as a "proxy" of current "effects"?*
+
+   </textarea>
+</section>
+</section>
+
+<section>
+<h2>Study: Nuisance</h2>
+
+<img data-src="pics/f1000-webshot-20200930.png"/>
+
+<small>
+Cheng CP and Halchenko YO. A new virtue of phantom MRI data: explaining variance in human participant data [version 1; peer review: awaiting peer review]. F1000Research 2020, 9:1131 (<a href=https://doi.org/10.12688/f1000research.24544.1>https://doi.org/10.12688/f1000research.24544.1</a>)
+</small>
+</section>
+
+
+<section>
+ <section data-markdown  data-separator="^\n----\n" data-vertical="^\n---\n"><textarea data-template>
+## What (Data sources)
+
+- 3.0 Tesla Siemens Prisma
+- duration: 10/30/2017--08/28/2018
+- 32-channel head coil
+- Agar phantom (Ethics: did not mind)
+  - QA is typically done (almost) each Monday
+- 206 participants (Ethics: consented to data re-sharing)
+  - see https://open-brain-consent.readthedocs.io
+  - data comes from studies of 3 PIs at DBIC
+  - 18-64 years of age
+  - 78 male/128 female
+
+----
+
+## With what (Software etc)
+
+- DICOM-to-BIDS: [HeuDiConv](https://github.com/nipy/heudiconv/) with [ReproIn](https://github.com/repronim/reproin/) heuristic
+- Base OS: [Debian GNU/Linux](http://debian.org) + [NeuroDebian](http://neuro.debian.net)
+- QA: [MRIQC](https://github.com/poldracklab/mriqc) (BIDS-App)
+- Morphometrics: ["Simple Workflow"](https://github.com/ReproNim/simple_workflow)
+  - [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki): BET, FAST, FIRST
+  - code/data/details: [10.12688/f1000research.10783.2](http://dx.doi.org/10.12688/f1000research.10783.2)
+- Data wrangling and analyses:
+  - [Python](http://python.org/), [pandas](https://pandas.pydata.org/), [statsmodels](https://www.statsmodels.org/stable/index.html), [Jupyter notebooks](https://jupyter.org/)
+- Containerization: [Singularity](https://singularity.lbl.gov)
+- Version control/distribution:
+  - [DataLad](http://datalad.org), [datalad-container](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html?), [///ReproNim/containers](https://github.com/ReproNim/containers)
+- Organization: follows [YODA principles](https://github.com/myyoda/poster/blob/master/ohbm2018.pdf)
+  - https://github.com/proj-nuisance/nuisance
+
+</textarea></section></section>
+
+<section>
+ <section data-markdown  data-separator="^\n----\n" data-vertical="^\n---\n"><textarea data-template>
+## Phantom
+
+### Q1: Why/What?
+
+   - *What factors effect QA metrics?*
+   - *How well could we explain variance in QA metrics?*
+
+----
+
+## Phantom: Variables
+
+![Figure 1](pics/f1000-webshot-20200930-fig1.png)
+
+----
+
+## Phantom: Let's model snr_total
+
+- Add a simplistic seasonal model
+  - we had only 1 year of data!
+  - cos and sin (period: year)
+- Simple OLS model
+  - variables sequentially orthogonalized in the order presented
+  - t-test for individual variables (SAR, Date, etc)
+  - F-test for Position (IOPDs) and Seasonal
+
+----
+
+## Phantom
+### Model: Total SNR
+
+![Fig 2](pics/f1000-webshot-20200930-fig2.png)
+
+----
+
+## Phantom
+### Model: Total SNR (variables)
+
+![Table 2](pics/f1000-webshot-20200930-tab2.png)
+
+----
+## Human(s)
+
+- *Q2: How to account for "scanner mood" in human data?*
+
+   - *Can we use phantom QA metrics as a "proxy" of current "effects"?*
+
+----
+
+## Human(s): Let's model total Gray volume
+
+- Take Phantom Total SNR, interpolate for human participant scanning dates
+- Add a simplistic seasonal model
+- Simple OLS model
+  - variables sequentially orthogonalized
+  - t-test for individual variables
+  - F-test for Position (IOPDs) and Seasonal
+
+----
+
+### Model: Gray brain matter
+
+![Fig 3](pics/f1000-webshot-20200930-fig3.png)
+
+----
+
+### Model: Gray brain matter (variables)
+
+![Table 3](pics/f1000-webshot-20200930-tab3.png)
+
+----
+
+## Human(s)
+### Model: CSF, Gray, White + 14 sub-cortical structures
+
+Q3: *What if we check other structures from simple_workflow?*
+
+- Check Total SNR and Seasonal variables only
+  - no fishing expedition (yet)
+- Result: Nothing passes test after FDR correction
+  - only Total SNR for Gray brain matter volume
+
+
+----
+
+## Conclusions
+
+- (Somewhat surprising):
+  - Variance in SNR through time can **very well** be explained by intrinsic factors
+- (Confirming others):
+  - Seasonal variations (but not in 1 year of Phantom)
+- (Our hypothesis confirmed):
+  - **A proxy measure of scanner health from phantom data can explain variance in human data results**
+
+</textarea></section></section>
+
 
 
 <section>
@@ -196,7 +417,10 @@ and seasonal variation data to control for variance in MRI studies</h3>
       { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
       { src: 'reveal.js/plugin/notes/notes.js', async: true }
-    ]
+    ],
+	 markdown: {
+		 smartypants: true
+	 }
   });
 </script>
 </body>
