@@ -22,7 +22,7 @@
 <section>
 <section>
 
-  <img data-src="pics/con-ccn-dartmouth-letterhead.svg">
+  <a href="http://centerforopenneuroscience.org/"><img data-src="pics/con-ccn-dartmouth-letterhead.svg"></a>
 
   <h3>Use of MRI QC metrics, scanning parameters and seasonal variation data to control for variance in MRI studies</h3>
 
@@ -68,7 +68,11 @@ and seasonal variation data to control for variance in MRI studies</h3>
   </div>
 <br><br>
     <small>
-    ReproNim center: <a href="https://repronim.org" target="_blank">https://repronim.org</a></small></a><br>
+	 <a href="http://repronim.org" target="_blank"> <img  style="height:150px;margin:20px"  data-src="pics/repronim-logo-vertical.svg"/></a>
+	 <a href="http://datalad.org" target="_blank"> <img  style="height:150px;margin:20px" data-src="pics/datalad_D.svg"/></a>
+	 <a href="http://neuro.debian.net" target="_blank"> <img  style="height:150px;margin:20px" data-src="pics/neurodebian.png"/></a>
+	 <a href="https://bids.neuroimaging.io" target="_blank"> <img  style="height:150px;margin:20px" data-src="pics/BIDS_Logo.png"/></a>
+	 <a href="https://github.com/myyoda/poster/blob/master/ohbm2018.pdf" target="_blank"> <img  style="height:150px;margin:20px" data-src="pics/yoda.svg"/></a>
 </small>
 </section>
 
@@ -350,12 +354,22 @@ Q3: *What if we check other structures from simple_workflow?*
 
 ## Conclusions
 
-- (Somewhat surprising):
+- *Somewhat surprising*:
   - Variance in SNR through time can **very well** be explained by intrinsic factors
-- (Confirming others):
+- *Confirming others*:
   - Seasonal variations (but not in 1 year of Phantom)
-- (Our hypothesis confirmed):
+- *Our hypothesis confirmed*:
   - **A proxy measure of scanner health from phantom data can explain variance in human data results**
+
+----
+
+## Future Directions
+
+- Fish a little more (other metrics)
+- Validate on new data from DBIC
+- Investigate explanatory power of scanning characteristics (TxRefAmp, etc)
+- Apply to fMRI data (resting state connectivity)
+- Apply to larger (other) datasets (e.g. ABCD, HCP)
 
 </textarea></section></section>
 
