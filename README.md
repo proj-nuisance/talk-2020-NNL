@@ -4,6 +4,8 @@ Slides setup is based on an excellent talk about DataLad for DebConf 2020 by Adi
 provided within https://github.com/datalad-handbook/course (Copyright
 Michael Hanke, Adina Wagner, et al)
 
+"Live" version is available at http://datasets.datalad.org/con/nuisance/presentations/2020-NNL/ .
+
 ## License
 
 CC-BY-SA: You are free to
